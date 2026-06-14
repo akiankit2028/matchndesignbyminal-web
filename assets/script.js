@@ -167,7 +167,7 @@ function initContactForm() {
       `*Name:* ${name}\n` +
       `*Phone:* ${phone}\n` +
       `*Category:* ${category || 'Not specified'}\n` +
-      `*Message:* ${message || 'I'd like more information.'}\n\n` +
+      `*Message:* ${message || "I'd like more information."}\n\n` +
       `— Sent from matchndesignbyminal.com`;
 
     window.open(buildWhatsAppLink(waMsg), '_blank', 'noopener,noreferrer');
@@ -214,7 +214,10 @@ function renderStoreInfo() {
   // Phone links
   document.querySelectorAll('[data-phone]').forEach(el => {
     el.href = `tel:${SHOP_DATA.phone}`;
-    el.textContent = SHOP_DATA.phone;
+    // Only replace text content if the element has no child elements (buttons have SVG icons)
+    if (!el.children.length) {
+      el.textContent = SHOP_DATA.phone;
+    }
   });
 
   // Social links
@@ -237,9 +240,9 @@ function renderStoreInfo() {
       `<p>${SHOP_DATA.timings.weekdays}</p><p>${SHOP_DATA.timings.sunday}</p>`;
   }
 
-  // Map embed
+  // Map embed — only use proper embed URLs (must contain 'embed' or 'maps/embed')
   const mapEl = document.getElementById('map-container');
-  if (mapEl && SHOP_DATA.mapEmbedUrl && SHOP_DATA.mapEmbedUrl.startsWith('http')) {
+  if (mapEl && SHOP_DATA.mapEmbedUrl && SHOP_DATA.mapEmbedUrl.includes('/maps/embed')) {
     mapEl.innerHTML = `
       <iframe src="${SHOP_DATA.mapEmbedUrl}"
               width="100%" height="320" style="border:0;" allowfullscreen

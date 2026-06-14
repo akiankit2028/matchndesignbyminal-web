@@ -60,7 +60,9 @@ const SHOP_CONFIG = {
   //   1. Go to Google Maps → Search your shop
   //   2. Click "Share" → "Embed a map" tab
   //   3. Copy ONLY the URL inside src="..." and paste below
-  mapEmbedUrl: 'https://share.google/4sA0lSu1wXHjDhFTD',
+  //   It should look like: 'https://www.google.com/maps/embed?pb=...'
+  //   NOTE: A share link (share.google/...) will NOT work — must be an embed URL
+  mapEmbedUrl: '',
 
 
   // ┌───────────────────────────────────────────────────────────┐
