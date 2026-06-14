@@ -1,44 +1,671 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ═══════════════════════════════════════════════════════
+       SEO & META
+       Replace all [BRACKETED] values with real information.
+       ═══════════════════════════════════════════════════════ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Match N Design by Minal</title>
 
-  <style>
-    body{
-      margin:0;
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#F8F2EB;
-      font-family:Arial,sans-serif;
-      color:#5C1F1F;
-    }
+  <!-- Primary Meta Tags -->
+  <title>Match N Design by Minal | Premium Women's Boutique</title>
+  <meta name="title"       content="Match N Design by Minal | Premium Women's Boutique">
+  <meta name="description" content="Discover premium sarees, designer dresses, fabrics, cord sets & dupattas at Match N Design by Minal. Elegant styles crafted for every occasion. Visit us today.">
+  <meta name="keywords"    content="sarees, women boutique, designer dresses, ethnic wear, designer fabrics, dupattas, cord sets, [CITY] boutique, Match N Design by Minal">
+  <meta name="author"      content="Match N Design by Minal">
+  <meta name="robots"      content="index, follow">
 
-    .card{
-      text-align:center;
-      padding:40px;
-    }
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://matchndesignbyminal.com/">
+  <meta property="og:title"       content="Match N Design by Minal | Premium Women's Boutique">
+  <meta property="og:description" content="Discover premium sarees, designer dresses, fabrics, cord sets & dupattas. Elegant styles crafted for every occasion.">
+  <!-- Replace with a real 1200×630 px image -->
+  <meta property="og:image"       content="https://matchndesignbyminal.com/assets/images/site/og-image.jpg">
 
-    h1{
-      font-size:42px;
-      margin-bottom:10px;
-    }
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://matchndesignbyminal.com/">
+  <meta name="twitter:title"       content="Match N Design by Minal | Premium Women's Boutique">
+  <meta name="twitter:description" content="Discover premium sarees, designer dresses, fabrics, cord sets & dupattas.">
+  <meta name="twitter:image"       content="https://matchndesignbyminal.com/assets/images/site/og-image.jpg">
 
-    p{
-      color:#666;
-      font-size:18px;
-    }
-  </style>
+  <link rel="canonical" href="https://matchndesignbyminal.com/">
+
+  <!-- Favicon (replace with actual files) -->
+  <link rel="icon"             type="image/x-icon" href="assets/images/site/favicon.ico">
+  <link rel="apple-touch-icon"                     href="assets/images/site/apple-touch-icon.png">
+
+  <!-- ═══════════════════════════════════════════════════════
+       FONTS
+       ═══════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- ═══════════════════════════════════════════════════════
+       TAILWIND CSS (CDN — includes all utility classes)
+       ═══════════════════════════════════════════════════════ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream  : '#FAF7F2',
+            maroon : { DEFAULT: '#7D1128', dark: '#5C0D1E', light: '#A31535' },
+            gold   : { DEFAULT: '#C9A96E', dark: '#A8843D', light: '#E4CFA0' },
+            dark   : '#2C1810',
+          },
+          fontFamily: {
+            serif : ['Playfair Display', 'Georgia', 'serif'],
+            sans  : ['Lato', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- ═══════════════════════════════════════════════════════
+       LOCAL BUSINESS STRUCTURED DATA
+       Replace every [BRACKET] with real values.
+       ═══════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Match N Design by Minal",
+    "description": "[SHOP_DESCRIPTION]",
+    "url": "https://matchndesignbyminal.com",
+    "telephone": "[PHONE_NUMBER]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[STREET_ADDRESS]",
+      "addressLocality": "[CITY]",
+      "addressRegion": "[STATE]",
+      "postalCode": "[PINCODE]",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "[OPENING_TIME]",
+        "closes": "[CLOSING_TIME]"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "[SUNDAY_OPENING_TIME]",
+        "closes": "[SUNDAY_CLOSING_TIME]"
+      }
+    ],
+    "image": "https://matchndesignbyminal.com/assets/images/site/og-image.jpg",
+    "sameAs": ["[INSTAGRAM_URL]", "[FACEBOOK_URL]"]
+  }
+  </script>
 </head>
 
-<body>
-<div class="card">
-  <h1>Match N Design by Minal</h1>
-  <p>Our new website is coming soon.</p>
-  <p>Stay tuned.</p>
-</div>
+<body class="bg-cream font-sans">
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVBAR — sticky, shadow on scroll, hamburger on mobile
+       ═══════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo + Name -->
+        <a href="index.html" class="flex items-center gap-3" aria-label="Match N Design by Minal — Home">
+          <!--
+            LOGO: Replace the div below with your actual logo:
+            <img src="assets/images/logo.png" alt="Match N Design by Minal" class="h-10 w-auto">
+          -->
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+               style="background:linear-gradient(135deg,#7D1128,#C9A96E);" aria-hidden="true">MN</div>
+          <div class="leading-tight">
+            <p class="font-serif font-semibold text-sm leading-none" style="color:#5C0D1E;">Match N Design</p>
+            <p class="text-xs font-medium tracking-wide"              style="color:#A8843D;">by Minal</p>
+          </div>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="hidden md:flex items-center gap-8" role="list">
+          <li><a href="index.html"    class="nav-link active text-sm">Home</a></li>
+          <li><a href="src/products.html" class="nav-link text-sm">Products</a></li>
+          <li><a href="src/about.html"    class="nav-link text-sm">About</a></li>
+          <li><a href="src/contact.html"  class="nav-link text-sm">Contact</a></li>
+        </ul>
+
+        <!-- Desktop WhatsApp CTA -->
+        <a href="#" data-whatsapp
+           class="hidden md:inline-flex items-center gap-2 btn-whatsapp text-sm px-5 py-2.5 rounded-full"
+           aria-label="Contact us on WhatsApp">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 -mr-1 focus:outline-none"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-cream border-t border-gold-light" style="border-color:rgba(201,169,110,0.25);">
+      <ul class="px-4 py-3 space-y-0.5" role="list">
+        <li><a href="index.html"    class="nav-link block py-3 text-sm font-medium">Home</a></li>
+        <li><a href="src/products.html" class="nav-link block py-3 text-sm font-medium">Products</a></li>
+        <li><a href="src/about.html"    class="nav-link block py-3 text-sm font-medium">About</a></li>
+        <li><a href="src/contact.html"  class="nav-link block py-3 text-sm font-medium">Contact</a></li>
+        <li class="pt-3 pb-1">
+          <a href="#" data-whatsapp
+             class="btn-whatsapp flex items-center justify-center gap-2 text-sm px-4 py-3 rounded-full w-full"
+             aria-label="Contact us on WhatsApp">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Navbar spacer -->
+  <div class="h-16" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 1 — HERO
+         To use a real photo, add to styles.css:
+           .hero-section {
+             background-image: linear-gradient(rgba(92,13,30,0.72), rgba(92,13,30,0.6)),
+                               url('assets/images/hero-banner.jpg');
+             background-size: cover; background-position: center;
+           }
+         ═══════════════════════════════════════════════════════ -->
+    <section class="hero-section min-h-screen flex items-center justify-center relative text-white"
+             aria-label="Hero banner">
+      <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
+
+        <p class="fade-in text-xs tracking-[0.35em] uppercase mb-5 font-medium opacity-80"
+           style="color:#E4CFA0;">✦ Welcome to ✦</p>
+
+        <h1 class="fade-up font-serif text-4xl sm:text-5xl lg:text-6xl font-bold hero-text-shadow"
+            style="line-height:1.2;">
+          Match N Design<br>
+          <em class="not-italic" style="color:#E4CFA0;">by Minal</em>
+        </h1>
+
+        <div class="fade-up stagger-2 flex items-center justify-center gap-4 my-6">
+          <span class="block h-px w-14 opacity-50" style="background:#C9A96E;"></span>
+          <span style="color:#C9A96E;font-size:14px;">✦</span>
+          <span class="block h-px w-14 opacity-50" style="background:#C9A96E;"></span>
+        </div>
+
+        <p class="fade-up stagger-3 text-lg sm:text-xl font-light mb-10 opacity-90"
+           style="font-family:'Lato',sans-serif;">
+          Elegant Styles Crafted for Every Occasion
+        </p>
+
+        <div class="fade-up stagger-4 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="src/products.html"
+             class="btn-gold text-sm sm:text-base px-8 py-3.5 rounded-sm justify-center"
+             aria-label="Explore our collection">
+            Explore Collection
+          </a>
+          <a href="#" data-whatsapp
+             class="btn-outline-cream text-sm sm:text-base px-8 py-3.5 rounded-sm gap-2"
+             aria-label="Contact us on WhatsApp">
+            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="fade-in stagger-6 absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-bounce"
+             style="bottom:-60px;" aria-hidden="true">
+          <span class="text-xs opacity-50 tracking-widest uppercase">Scroll</span>
+          <svg class="w-5 h-5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 2 — ABOUT STORE
+         ═══════════════════════════════════════════════════════ -->
+    <section id="about" class="section-white py-20 px-4" aria-labelledby="about-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="fade-in text-xs tracking-[0.35em] uppercase font-medium mb-3" style="color:#A8843D;">Our Story</p>
+          <h2 id="about-heading" class="section-heading fade-up font-serif text-3xl sm:text-4xl font-bold mb-4">About Our Boutique</h2>
+          <div class="gold-divider fade-in stagger-2"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Store image placeholder -->
+          <!--
+            Replace the div below with your store photo:
+            <img src="assets/images/about-store.jpg" alt="Match N Design by Minal store" class="rounded-xl w-full h-96 object-cover shadow-xl">
+          -->
+          <div class="img-placeholder slide-left rounded-xl h-80 lg:h-96 w-full shadow-xl"
+               style="background:linear-gradient(135deg,#5C0D1E 0%,#7D1128 45%,#A8843D 80%,#C9A96E 100%);"
+               aria-label="Store image — replace with actual photo">
+            <div style="text-align:center;padding:32px;">
+              <div style="font-size:4rem;margin-bottom:10px;">🏪</div>
+              <p style="color:rgba(255,255,255,0.65);font-size:12px;text-transform:uppercase;letter-spacing:1.5px;">Store Photo Here</p>
+              <p style="color:rgba(255,255,255,0.35);font-size:10px;margin-top:4px;">Replace with actual image</p>
+            </div>
+          </div>
+
+          <!-- Text content -->
+          <div class="slide-right">
+            <p class="text-xs tracking-[0.3em] uppercase font-medium mb-2" style="color:#A8843D;">✦ Welcome ✦</p>
+            <h3 class="font-serif text-2xl lg:text-3xl font-semibold mb-5" style="color:#5C0D1E;">
+              Match N Design by Minal
+            </h3>
+            <!--
+              DESCRIPTION: Replace the paragraph text below with your actual shop description.
+              Update SHOP_DATA.description in assets/script.js as well.
+            -->
+            <p class="text-gray-600 leading-relaxed mb-4 text-sm">
+              Welcome to Match N Design by Minal — your premier destination for exquisite women's ethnic and contemporary fashion.
+              We bring together the finest sarees, designer fabrics, and curated collections under one roof.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-7 text-sm">
+              Our boutique is built on a passion for fashion and a commitment to personalized service.
+              Every piece is handpicked to ensure you find something truly special for every occasion —
+              from daily wear to grand celebrations.
+            </p>
+
+            <!-- Stats — values come from SHOP_DATA in script.js -->
+            <div class="grid grid-cols-3 gap-4 mb-7">
+              <div class="text-center rounded-xl p-4" style="background:#FAF7F2;">
+                <p id="stat-years" class="stat-number">[X]+</p>
+                <p class="text-xs text-gray-500 mt-1 uppercase tracking-wide leading-tight">Years<br>of Service</p>
+              </div>
+              <div class="text-center rounded-xl p-4" style="background:#FAF7F2;">
+                <p id="stat-customers" class="stat-number">[XXX]+</p>
+                <p class="text-xs text-gray-500 mt-1 uppercase tracking-wide leading-tight">Happy<br>Customers</p>
+              </div>
+              <div class="text-center rounded-xl p-4" style="background:#FAF7F2;">
+                <p id="stat-collections" class="stat-number">[XX]+</p>
+                <p class="text-xs text-gray-500 mt-1 uppercase tracking-wide leading-tight">Premium<br>Collections</p>
+              </div>
+            </div>
+
+            <a href="src/about.html" class="btn-primary rounded-sm text-sm">Read Our Full Story →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 3 — PRODUCT CATEGORIES
+         Cards are rendered from SHOP_DATA.categories (script.js)
+         ═══════════════════════════════════════════════════════ -->
+    <section id="categories" class="section-gold-light py-20 px-4" aria-labelledby="categories-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="fade-in text-xs tracking-[0.35em] uppercase font-medium mb-3" style="color:#A8843D;">What We Offer</p>
+          <h2 id="categories-heading" class="section-heading fade-up font-serif text-3xl sm:text-4xl font-bold mb-4">Our Collections</h2>
+          <div class="gold-divider fade-in stagger-2"></div>
+          <p class="fade-up stagger-3 text-gray-600 mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+            From timeless sarees to trendy cord sets — explore our curated range of premium women's fashion
+          </p>
+        </div>
+
+        <!-- Rendered by renderCategories() in script.js -->
+        <div id="categories-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+             aria-label="Product categories"></div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 4 — FEATURED COLLECTION
+         Cards rendered from SHOP_DATA.featured (script.js)
+         ═══════════════════════════════════════════════════════ -->
+    <section id="featured" class="section-white py-20 px-4" aria-labelledby="featured-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="fade-in text-xs tracking-[0.35em] uppercase font-medium mb-3" style="color:#A8843D;">Handpicked For You</p>
+          <h2 id="featured-heading" class="section-heading fade-up font-serif text-3xl sm:text-4xl font-bold mb-4">Featured Collection</h2>
+          <div class="gold-divider fade-in stagger-2"></div>
+        </div>
+
+        <!-- Rendered by renderFeatured() in script.js -->
+        <div id="featured-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+             aria-label="Featured products"></div>
+
+        <div class="text-center mt-10 fade-up">
+          <a href="src/products.html" class="btn-primary rounded-sm text-sm px-8 py-3.5">View All Products →</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 5 — WHY CHOOSE US
+         Rendered from SHOP_DATA.features (script.js)
+         ═══════════════════════════════════════════════════════ -->
+    <section id="why-us" class="section-maroon py-20 px-4 text-white" aria-labelledby="why-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="fade-in text-xs tracking-[0.35em] uppercase font-medium mb-3" style="color:#E4CFA0;">Our Promise</p>
+          <h2 id="why-heading" class="fade-up font-serif text-3xl sm:text-4xl font-bold mb-4 text-white">Why Choose Us?</h2>
+          <div class="gold-divider fade-in stagger-2"></div>
+        </div>
+
+        <!-- Rendered by renderFeatures() in script.js -->
+        <div id="features-container" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6"
+             aria-label="Our key features"></div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 6 — TESTIMONIALS
+         Rendered from SHOP_DATA.testimonials (script.js)
+         ═══════════════════════════════════════════════════════ -->
+    <section id="testimonials" class="section-cream py-20 px-4" aria-labelledby="testimonials-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="fade-in text-xs tracking-[0.35em] uppercase font-medium mb-3" style="color:#A8843D;">Loved By Customers</p>
+          <h2 id="testimonials-heading" class="section-heading fade-up font-serif text-3xl sm:text-4xl font-bold mb-4">What Our Customers Say</h2>
+          <div class="gold-divider fade-in stagger-2"></div>
+        </div>
+
+        <!-- Rendered by renderTestimonials() in script.js -->
+        <div id="testimonials-container" class="grid md:grid-cols-3 gap-6"
+             aria-label="Customer reviews"></div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 7 — VISIT STORE
+         Update address, timings, and mapEmbedUrl in SHOP_DATA
+         ═══════════════════════════════════════════════════════ -->
+    <section id="visit" class="section-white py-20 px-4" aria-labelledby="visit-heading">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-14">
+          <p class="fade-in text-xs tracking-[0.35em] uppercase font-medium mb-3" style="color:#A8843D;">Find Us</p>
+          <h2 id="visit-heading" class="section-heading fade-up font-serif text-3xl sm:text-4xl font-bold mb-4">Visit Our Store</h2>
+          <div class="gold-divider fade-in stagger-2"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+          <!-- MAP — replaced by JS if mapEmbedUrl is set in SHOP_DATA -->
+          <div id="map-container" class="map-container slide-left" aria-label="Store location map">
+            <!-- Default placeholder (shown until Google Maps embed URL is set) -->
+            <div class="img-placeholder h-72 lg:h-80 w-full"
+                 style="background:linear-gradient(135deg,#EDE8E0,#D8D0C8);"
+                 aria-label="Map placeholder — update mapEmbedUrl in SHOP_DATA">
+              <div style="text-align:center;padding:32px;">
+                <svg class="mx-auto mb-3" style="width:56px;height:56px;opacity:.4;" fill="none" stroke="#7D1128" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <p style="color:#7D1128;font-size:13px;font-weight:600;">Add Google Maps Embed</p>
+                <p style="color:#999;font-size:11px;margin-top:4px;">Update mapEmbedUrl in SHOP_DATA (script.js)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Store info -->
+          <div class="slide-right space-y-6">
+
+            <!-- Address -->
+            <div class="flex gap-4 items-start">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:#FAF7F2;">
+                <svg class="w-5 h-5" fill="none" stroke="#7D1128" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm mb-1" style="color:#2C1810;">Our Address</h3>
+                <p class="text-gray-600 text-sm leading-relaxed" data-shop-address>[SHOP_ADDRESS], [CITY], [STATE] — [PINCODE]</p>
+              </div>
+            </div>
+
+            <!-- Timings -->
+            <div class="flex gap-4 items-start">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:#FAF7F2;">
+                <svg class="w-5 h-5" fill="none" stroke="#7D1128" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm mb-1" style="color:#2C1810;">Store Timings</h3>
+                <div id="store-timings" class="text-gray-600 text-sm space-y-0.5">
+                  <p>Monday – Saturday: 10:00 AM – 8:00 PM</p>
+                  <p>Sunday: 11:00 AM – 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex gap-4 items-start">
+              <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background:#FAF7F2;">
+                <svg class="w-5 h-5" fill="none" stroke="#7D1128" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm mb-1" style="color:#2C1810;">Call Us</h3>
+                <a href="#" data-phone class="text-gray-600 text-sm hover:underline" style="transition:color .2s;">[PHONE_NUMBER]</a>
+              </div>
+            </div>
+
+            <!-- CTA buttons -->
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="#" data-phone
+                 class="btn-primary rounded-sm text-sm px-6 py-3 gap-2"
+                 aria-label="Call us now">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                Call Now
+              </a>
+              <a href="#" data-whatsapp
+                 class="btn-whatsapp rounded-sm text-sm px-6 py-3 gap-2"
+                 aria-label="Message us on WhatsApp">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 8 — CONTACT FORM
+         Form submits via WhatsApp — no backend needed.
+         ═══════════════════════════════════════════════════════ -->
+    <section id="contact" class="section-gold-light py-20 px-4" aria-labelledby="contact-heading">
+      <div class="max-w-2xl mx-auto">
+
+        <div class="text-center mb-10">
+          <p class="fade-in text-xs tracking-[0.35em] uppercase font-medium mb-3" style="color:#A8843D;">Get In Touch</p>
+          <h2 id="contact-heading" class="section-heading fade-up font-serif text-3xl sm:text-4xl font-bold mb-4">Send Us a Message</h2>
+          <div class="gold-divider fade-in stagger-2"></div>
+          <p class="fade-up stagger-3 text-gray-600 mt-4 text-sm">Fill in the form and we'll connect with you on WhatsApp instantly</p>
+        </div>
+
+        <form id="contact-form"
+              class="bg-white rounded-2xl p-7 sm:p-9 shadow-lg fade-up stagger-2"
+              aria-label="Contact inquiry form"
+              novalidate>
+
+          <div class="grid sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label for="c-name" class="block text-xs font-semibold mb-1.5 uppercase tracking-wide" style="color:#2C1810;">
+                Your Name <span style="color:#D32F2F;">*</span>
+              </label>
+              <input id="c-name" name="name" type="text"
+                     placeholder="e.g. Priya Sharma"
+                     class="form-input" required autocomplete="name" aria-required="true">
+            </div>
+            <div>
+              <label for="c-phone" class="block text-xs font-semibold mb-1.5 uppercase tracking-wide" style="color:#2C1810;">
+                Phone Number <span style="color:#D32F2F;">*</span>
+              </label>
+              <input id="c-phone" name="phone" type="tel"
+                     placeholder="e.g. +91 98765 43210"
+                     class="form-input" required autocomplete="tel" aria-required="true">
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label for="form-category" class="block text-xs font-semibold mb-1.5 uppercase tracking-wide" style="color:#2C1810;">
+              Interested In
+            </label>
+            <select id="form-category" name="category" class="form-input" aria-label="Select product category">
+              <option value="">— Select a Category —</option>
+              <!-- Options added by populateCategoryDropdown() in script.js -->
+            </select>
+          </div>
+
+          <div class="mb-6">
+            <label for="c-message" class="block text-xs font-semibold mb-1.5 uppercase tracking-wide" style="color:#2C1810;">
+              Your Message
+            </label>
+            <textarea id="c-message" name="message" rows="4"
+                      placeholder="Tell us what you're looking for…"
+                      class="form-input resize-none" aria-label="Your message"></textarea>
+          </div>
+
+          <button type="submit"
+                  class="btn-whatsapp w-full rounded-xl text-base py-4 font-semibold justify-center gap-3"
+                  aria-label="Submit via WhatsApp">
+            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Send Message via WhatsApp
+          </button>
+          <p class="text-center text-xs text-gray-400 mt-3">Clicking submit will open WhatsApp with your message pre-filled</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="py-14 px-4" role="contentinfo">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+
+        <!-- Brand column -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold"
+                 style="background:linear-gradient(135deg,#A31535,#C9A96E);" aria-hidden="true">MN</div>
+            <div>
+              <p class="font-serif font-semibold text-white text-base leading-none">Match N Design</p>
+              <p class="text-xs tracking-wide footer-link">by Minal</p>
+            </div>
+          </div>
+          <p class="text-sm leading-relaxed mb-5" style="color:rgba(228,207,160,.65);">
+            Your premium destination for elegant women's fashion.<br>
+            Sarees, designer fabrics, dresses and more — curated with love.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" data-instagram aria-label="Instagram"
+               class="w-9 h-9 rounded-full border flex items-center justify-center footer-link transition-colors hover:border-gold-light"
+               style="border-color:rgba(201,169,110,.3);">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" data-facebook aria-label="Facebook"
+               class="w-9 h-9 rounded-full border flex items-center justify-center footer-link transition-colors hover:border-gold-light"
+               style="border-color:rgba(201,169,110,.3);">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" data-whatsapp aria-label="WhatsApp"
+               class="w-9 h-9 rounded-full border flex items-center justify-center footer-link transition-colors hover:border-gold-light"
+               style="border-color:rgba(201,169,110,.3);">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <h3 class="font-serif text-base font-semibold mb-4 text-white">Quick Links</h3>
+          <ul class="space-y-2" role="list">
+            <li><a href="index.html"    class="footer-link text-sm block">Home</a></li>
+            <li><a href="src/products.html" class="footer-link text-sm block">Products</a></li>
+            <li><a href="src/about.html"    class="footer-link text-sm block">About Us</a></li>
+            <li><a href="src/contact.html"  class="footer-link text-sm block">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Store info -->
+        <div>
+          <h3 class="font-serif text-base font-semibold mb-4 text-white">Store Info</h3>
+          <ul class="space-y-2 text-sm" style="color:rgba(228,207,160,.7);" role="list">
+            <li data-shop-address class="leading-relaxed">[SHOP_ADDRESS], [CITY]</li>
+            <li><a href="#" data-phone class="footer-link">[PHONE_NUMBER]</a></li>
+            <li>Mon–Sat: 10:00 AM – 8:00 PM</li>
+            <li>Sun: 11:00 AM – 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs"
+           style="border-color:rgba(201,169,110,.18);">
+        <p style="color:rgba(228,207,160,.55);">
+          © <span id="footer-year"></span> Match N Design by Minal. All rights reserved.
+        </p>
+        <p style="color:rgba(228,207,160,.3);">Designed with ♥ for premium fashion</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FLOATING WHATSAPP BUTTON
+       ═══════════════════════════════════════════════════════ -->
+  <a href="#" data-whatsapp class="floating-whatsapp"
+     aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BACK TO TOP BUTTON
+       ═══════════════════════════════════════════════════════ -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCRIPTS
+       config.js = your editable shop data (edit this file!)
+       script.js = website logic (do not edit)
+       ═══════════════════════════════════════════════════════ -->
+  <script src="assets/config.js"></script>
+  <script src="assets/script.js"></script>
+
 </body>
 </html>
