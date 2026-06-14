@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Products | Match N Design by Minal</title>
-  <meta name="title"       content="Products | Match N Design by Minal">
-  <meta name="description" content="Browse our premium collection — sarees, 2 & 3-piece dresses, designer fabrics, dupattas, cord sets and stitching materials at Match N Design by Minal.">
+  <title>Products | Match & Design</title>
+  <meta name="title"       content="Products | Match & Design">
+  <meta name="description" content="Browse our premium collection — sarees, 2 & 3-piece dresses, designer fabrics, dupattas, cord sets and stitching materials at Match & Design.">
   <meta name="robots"      content="index, follow">
 
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://matchndesignbyminal.com/products.html">
-  <meta property="og:title"       content="Products | Match N Design by Minal">
+  <meta property="og:title"       content="Products | Match & Design">
   <meta property="og:description" content="Browse our premium collection — sarees, dresses, designer fabrics, dupattas, cord sets and more.">
   <meta property="og:image"       content="https://matchndesignbyminal.com/assets/images/site/og-image.jpg">
 
@@ -30,9 +30,9 @@
         extend: {
           colors: {
             cream  : '#FAF7F2',
-            maroon : { DEFAULT: '#7D1128', dark: '#5C0D1E', light: '#A31535' },
+            primary: { DEFAULT: '#3D8B67', dark: '#2B6B4E', light: '#5AAA82' },
             gold   : { DEFAULT: '#C9A96E', dark: '#A8843D', light: '#E4CFA0' },
-            dark   : '#2C1810',
+            dark   : '#1F2E28',
           },
           fontFamily: {
             serif : ['Playfair Display', 'Georgia', 'serif'],
@@ -52,12 +52,12 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
 
-        <a href="../index.html" class="flex items-center gap-3" aria-label="Match N Design by Minal — Home">
+        <a href="../index.html" class="flex items-center gap-3" aria-label="Match & Design — Home">
           <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
-               style="background:linear-gradient(135deg,#7D1128,#C9A96E);" aria-hidden="true">MN</div>
+               style="background:linear-gradient(135deg,#3D8B67,#C9A96E);" aria-hidden="true">MN</div>
           <div class="leading-tight">
-            <p class="font-serif font-semibold text-sm leading-none" style="color:#5C0D1E;">Match N Design</p>
-            <p class="text-xs font-medium tracking-wide" style="color:#A8843D;">by Minal</p>
+            <p class="font-serif font-semibold text-sm leading-none" style="color:#2B6B4E;">Match & Design</p>
+            
           </div>
         </a>
 
@@ -131,9 +131,9 @@
         <!-- Count & intro -->
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 fade-up">
           <div>
-            <h2 id="products-heading" class="section-heading font-serif text-2xl font-bold">Browse All Products</h2>
+            <h2 id="products-heading" class="section-heading font-serif text-2xl font-bold">Our Product Categories</h2>
             <p class="text-gray-500 text-sm mt-1">
-              Showing <span id="product-count" class="font-semibold" style="color:#7D1128;">—</span> categories
+              <span id="product-count" class="font-semibold" style="color:#3D8B67;">—</span> categories available — inquire for details
             </p>
           </div>
           <a href="#" data-whatsapp
@@ -144,12 +144,11 @@
           </a>
         </div>
 
-        <!-- Filter tabs — rendered by renderProductsPage() in script.js -->
+        <!-- Filter tabs (hidden by JS for simple category view) -->
         <div id="product-filters"
              class="flex flex-wrap gap-2 mb-8 pb-4 border-b fade-in"
              style="border-color:rgba(201,169,110,.25);"
              role="group" aria-label="Filter products by category">
-          <!-- Buttons injected by JS -->
         </div>
 
         <!-- Products grid — rendered by renderProductsPage() in script.js -->
@@ -189,10 +188,10 @@
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold"
-                 style="background:linear-gradient(135deg,#A31535,#C9A96E);" aria-hidden="true">MN</div>
+                 style="background:linear-gradient(135deg,#5AAA82,#C9A96E);" aria-hidden="true">MN</div>
             <div>
-              <p class="font-serif font-semibold text-white text-base leading-none">Match N Design</p>
-              <p class="text-xs tracking-wide footer-link">by Minal</p>
+              <p class="font-serif font-semibold text-white text-base leading-none">Match & Design</p>
+              
             </div>
           </div>
           <p class="text-sm leading-relaxed mb-5" style="color:rgba(228,207,160,.65);">Your premium destination for elegant women's fashion.</p>
@@ -226,7 +225,7 @@
       </div>
       <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs"
            style="border-color:rgba(201,169,110,.18);">
-        <p style="color:rgba(228,207,160,.55);">© <span id="footer-year"></span> Match N Design by Minal. All rights reserved.</p>
+        <p style="color:rgba(228,207,160,.55);">© <span id="footer-year"></span> Match & Design. All rights reserved.</p>
         <p style="color:rgba(228,207,160,.3);">Designed with ♥ for premium fashion</p>
       </div>
     </div>

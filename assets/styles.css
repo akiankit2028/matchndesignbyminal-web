@@ -1,17 +1,17 @@
 /*
  * ============================================================
- * Match N Design by Minal — Custom Styles
+ * Match N Design — Custom Styles
  * Supplements Tailwind CSS (loaded via CDN)
  *
  * COLOR PALETTE (defined as CSS variables):
- *   --cream      : #FAF7F2  (page background)
- *   --maroon     : #7D1128  (primary brand color)
- *   --maroon-dark: #5C0D1E  (dark variant)
- *   --maroon-light:#A31535  (light variant)
- *   --gold       : #C9A96E  (accent)
- *   --gold-dark  : #A8843D  (dark gold)
- *   --gold-light : #E4CFA0  (light gold)
- *   --dark       : #2C1810  (heading text)
+ *   --cream       : #FAF7F2  (page background)
+ *   --primary     : #3D8B67  (sage green — brand color)
+ *   --primary-dark: #2B6B4E  (dark forest green)
+ *   --primary-light:#5AAA82  (light sage)
+ *   --gold        : #C9A96E  (accent)
+ *   --gold-dark   : #A8843D  (dark gold)
+ *   --gold-light  : #E4CFA0  (light gold)
+ *   --dark        : #1F2E28  (heading text)
  * ============================================================
  */
 
@@ -20,15 +20,15 @@
 
 /* ── CSS CUSTOM PROPERTIES ───────────────────────────────── */
 :root {
-  --cream       : #FAF7F2;
-  --maroon      : #7D1128;
-  --maroon-dark : #5C0D1E;
-  --maroon-light: #A31535;
-  --gold        : #C9A96E;
-  --gold-dark   : #A8843D;
-  --gold-light  : #E4CFA0;
-  --dark        : #2C1810;
-  --text-muted  : #6B5B55;
+  --cream        : #FAF7F2;
+  --maroon       : #3D8B67;
+  --maroon-dark  : #2B6B4E;
+  --maroon-light : #5AAA82;
+  --gold         : #C9A96E;
+  --gold-dark    : #A8843D;
+  --gold-light   : #E4CFA0;
+  --dark         : #1F2E28;
+  --text-muted   : #4A6B5A;
 }
 
 /* ── BASE ──────────────────────────────────────────────────── */
@@ -129,34 +129,35 @@ body {
 /*
  * To use a real photo, add this to your page's <style> or update here:
  *   .hero-section {
- *     background-image: linear-gradient(rgba(92,13,30,0.75), rgba(92,13,30,0.6)),
- *                       url('assets/images/hero-banner.jpg');
+ *     background-image: linear-gradient(rgba(43,107,78,0.8), rgba(43,107,78,0.65)),
+ *                       url('assets/images/site/hero-banner.jpg');
  *     background-size: cover;
  *     background-position: center;
  *   }
  */
 .hero-section {
   background: linear-gradient(135deg,
-    var(--maroon-dark) 0%,
-    var(--maroon)      45%,
-    #9B1B30            75%,
-    var(--gold-dark)   100%);
+    #1B5E40 0%,
+    #2B6B4E 30%,
+    #3D8B67 60%,
+    #5AAA82 85%,
+    var(--gold-dark) 100%);
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle pattern overlay */
+/* Subtle leaf pattern overlay */
 .hero-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9A96E' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
 }
 
 /* Mini hero for inner pages */
 .mini-hero {
-  background: linear-gradient(135deg, var(--maroon-dark) 0%, var(--maroon) 60%, #9B1B30 100%);
+  background: linear-gradient(135deg, #1B5E40 0%, #2B6B4E 40%, #3D8B67 80%, #5AAA82 100%);
   position: relative;
   overflow: hidden;
 }
@@ -164,17 +165,13 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C9A96E' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
 }
 
 .hero-text-shadow { text-shadow: 2px 4px 20px rgba(0, 0, 0, 0.3); }
 
 /* ── IMAGE PLACEHOLDERS ───────────────────────────────────── */
-/*
- * These are temporary gradient backgrounds used where real
- * product/category photos will go. Replace with <img> tags.
- */
 .img-placeholder {
   display: flex;
   align-items: center;
@@ -183,13 +180,14 @@ body {
 }
 
 /* Category-specific placeholder gradients */
-.img-placeholder-saree   { background: linear-gradient(135deg, #5C0D1E, #8B1A2E, #C9A96E); }
-.img-placeholder-dress   { background: linear-gradient(135deg, #7D1128, #A0144B, #D4A06A); }
-.img-placeholder-fabric  { background: linear-gradient(135deg, #3D1A08, #7D4E24, #C9A96E); }
-.img-placeholder-lining  { background: linear-gradient(135deg, #1A3D5C, #2E6B9E, #8BB8D4); }
-.img-placeholder-cord    { background: linear-gradient(135deg, #1A5C2E, #2E9E4B, #7DC48B); }
-.img-placeholder-dupatta { background: linear-gradient(135deg, #5C1A5C, #9E2E9E, #D48BD4); }
-.img-placeholder-featured{ background: linear-gradient(135deg, #5C0D1E, #7D1128, #A8843D); }
+.img-placeholder-saree   { background: linear-gradient(135deg, #2B6B4E, #3D8B67, #C9A96E); }
+.img-placeholder-dress   { background: linear-gradient(135deg, #3D8B67, #6BBF95, #E4CFA0); }
+.img-placeholder-fabric  { background: linear-gradient(135deg, #5A4E3D, #8B7D5C, #C9A96E); }
+.img-placeholder-lining  { background: linear-gradient(135deg, #3D6B7D, #5A9EB0, #A8D5E2); }
+.img-placeholder-cord    { background: linear-gradient(135deg, #2E6B4B, #4A9E6E, #8BC4A0); }
+.img-placeholder-dupatta { background: linear-gradient(135deg, #6B4A7D, #9E6BB0, #D4A8E2); }
+.img-placeholder-lace    { background: linear-gradient(135deg, #7D6B4A, #B09E6B, #E2D4A8); }
+.img-placeholder-featured{ background: linear-gradient(135deg, #2B6B4E, #3D8B67, #A8843D); }
 
 /* ── BUTTONS ──────────────────────────────────────────────── */
 .btn-primary {
@@ -209,7 +207,7 @@ body {
   background: var(--maroon-dark);
   border-color: var(--maroon-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(125, 17, 40, 0.3);
+  box-shadow: 0 8px 20px rgba(61, 139, 103, 0.3);
   color: #fff;
 }
 
@@ -286,7 +284,7 @@ body {
 }
 .category-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(125, 17, 40, 0.14);
+  box-shadow: 0 20px 40px rgba(61, 139, 103, 0.14);
 }
 
 .product-card {
@@ -298,7 +296,7 @@ body {
 }
 .product-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(125, 17, 40, 0.14);
+  box-shadow: 0 16px 32px rgba(61, 139, 103, 0.14);
 }
 
 /* ── WHY CHOOSE US ────────────────────────────────────────── */
@@ -311,12 +309,12 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  box-shadow: 0 8px 24px rgba(125, 17, 40, 0.25);
+  box-shadow: 0 8px 24px rgba(61, 139, 103, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .feature-card:hover .feature-icon-wrapper {
   transform: scale(1.1);
-  box-shadow: 0 12px 32px rgba(125, 17, 40, 0.35);
+  box-shadow: 0 12px 32px rgba(61, 139, 103, 0.35);
 }
 
 /* ── TESTIMONIALS ─────────────────────────────────────────── */
@@ -350,7 +348,7 @@ body {
 .form-input:focus {
   outline: none;
   border-color: var(--maroon);
-  box-shadow: 0 0 0 3px rgba(125, 17, 40, 0.08);
+  box-shadow: 0 0 0 3px rgba(61, 139, 103, 0.08);
 }
 .form-input::placeholder { color: #B0A8A3; }
 
@@ -390,7 +388,7 @@ body {
 .back-to-top {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 1000;
   width: 46px;
   height: 46px;
@@ -404,7 +402,7 @@ body {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.35s ease, transform 0.35s ease, background 0.3s ease;
-  box-shadow: 0 4px 16px rgba(125, 17, 40, 0.35);
+  box-shadow: 0 4px 16px rgba(61, 139, 103, 0.35);
 }
 .back-to-top.visible {
   opacity: 1;
@@ -476,7 +474,7 @@ footer { background: var(--maroon-dark); }
 /* ── PRODUCT FILTER TABS ──────────────────────────────────── */
 .filter-tab {
   padding: 8px 20px;
-  border: 1.5px solid rgba(125, 17, 40, 0.3);
+  border: 1.5px solid rgba(61, 139, 103, 0.3);
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -492,7 +490,7 @@ footer { background: var(--maroon-dark); }
   background: var(--maroon);
   color: #fff;
   border-color: var(--maroon);
-  box-shadow: 0 4px 12px rgba(125, 17, 40, 0.25);
+  box-shadow: 0 4px 12px rgba(61, 139, 103, 0.25);
 }
 
 /* ── CONTACT INFO CARD ────────────────────────────────────── */
@@ -507,7 +505,7 @@ footer { background: var(--maroon-dark); }
 }
 .info-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(125, 17, 40, 0.1);
+  box-shadow: 0 12px 28px rgba(61, 139, 103, 0.1);
 }
 .info-card-icon {
   width: 64px;
@@ -518,7 +516,7 @@ footer { background: var(--maroon-dark); }
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
-  box-shadow: 0 6px 18px rgba(125, 17, 40, 0.25);
+  box-shadow: 0 6px 18px rgba(61, 139, 103, 0.25);
 }
 
 /* ── VALUE CARD (About Page) ──────────────────────────────── */
@@ -532,7 +530,7 @@ footer { background: var(--maroon-dark); }
 }
 .value-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(125, 17, 40, 0.1);
+  box-shadow: 0 12px 28px rgba(61, 139, 103, 0.1);
 }
 
 /* ── BREADCRUMB ───────────────────────────────────────────── */
@@ -576,6 +574,9 @@ footer { background: var(--maroon-dark); }
 .ornament::after {
   background: linear-gradient(90deg, var(--gold), transparent);
 }
+
+/* ── HIDE SCROLLBARS ──────────────────────────────────────── */
+#values-scroll::-webkit-scrollbar { display: none; }
 
 /* ── RESPONSIVE UTILITIES ─────────────────────────────────── */
 @media (max-width: 640px) {

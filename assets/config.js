@@ -33,8 +33,8 @@ const SHOP_CONFIG = {
   name    : 'Match & Design',
   tagline : 'Elegant Styles Crafted for Every Occasion',
 
-  // A short description of your boutique (2-3 sentences)
-  description: 'A premium boutique offering the finest collections of sarees, designer dresses, fabrics and more — curated with love and an eye for detail.',
+  // A short description of your store (2-3 sentences)
+  description: 'A premium store offering the finest collections of sarees, designer dresses, fabrics and more — curated with love and an eye for detail.',
 
 
   // ┌───────────────────────────────────────────────────────────┐
@@ -62,7 +62,7 @@ const SHOP_CONFIG = {
   //   3. Copy ONLY the URL inside src="..." and paste below
   //   It should look like: 'https://www.google.com/maps/embed?pb=...'
   //   NOTE: A share link (share.google/...) will NOT work — must be an embed URL
-  mapEmbedUrl: '',
+  mapEmbedUrl: 'https://maps.google.com/maps?q=Match+%26+Design+Naganathapura+Rayasandra+Karnataka+560100&t=&z=16&ie=UTF8&iwloc=&output=embed',
 
 
   // ┌───────────────────────────────────────────────────────────┐
@@ -106,16 +106,17 @@ const SHOP_CONFIG = {
   // │  IMAGE FOLDER STRUCTURE:                                  │
   // │    assets/images/                                         │
   // │      site/         ← logo, hero, og-image, favicon        │
-  // │      sarees/       ← saree photos (cover.jpg + products)  │
-  // │      dresses/      ← dress photos                         │
-  // │      fabrics/      ← fabric photos                        │
-  // │      linings/      ← lining photos                        │
-  // │      cordsets/     ← cord set photos                      │
-  // │      dupattas/     ← dupatta photos                       │
+  // │      sarees/       ← cover-1.jpg, cover-2.jpg, etc.      │
+  // │      dresses/      ← cover-1.jpg, cover-2.jpg, etc.      │
+  // │      fabrics/      ← cover-1.jpg, cover-2.jpg, etc.      │
+  // │      ...                                                  │
   // │                                                           │
-  // │  Each category has an 'img' field for its cover photo.    │
-  // │  Each product has an 'img' field for its individual photo.│
-  // │  Leave img as '' (empty) to show the gradient placeholder.│
+  // │  HOW CATEGORY IMAGES WORK:                                │
+  // │    1. Put photos in the category folder as:               │
+  // │         cover-1.jpg, cover-2.jpg, cover-3.jpg ...         │
+  // │    2. Set 'coverCount' below to how many you added        │
+  // │    3. Photos auto-rotate in a carousel!                   │
+  // │    4. Set coverCount to 0 to show gradient placeholder    │
   // └───────────────────────────────────────────────────────────┘
 
   categories: [
@@ -125,14 +126,8 @@ const SHOP_CONFIG = {
       description : 'Explore our exquisite range of handpicked sarees — from traditional silk weaves to contemporary prints, crafted to make every occasion memorable.',
       priceRange  : '₹299 – ₹3,999',
       icon        : '🥻',
-      img         : '',  // e.g. 'assets/images/sarees/cover.jpg'
+      coverCount  : 1,   // Number of cover photos (cover-1.jpg, cover-2.jpg, ...)
       products    : [],
-      // ── HOW TO ADD PRODUCTS ──
-      // Replace the empty [] above with a list like this:
-      // products: [
-      //   { id: 1, title: 'Royal Banarasi Silk Saree', price: '₹2,499', badge: 'Bestseller', img: 'assets/images/sarees/1.jpg' },
-      //   { id: 2, title: 'Pastel Georgette Saree',    price: '₹1,799', badge: '',           img: 'assets/images/sarees/2.jpg' },
-      // ],
     },
     {
       id          : 'dresses',
@@ -140,7 +135,7 @@ const SHOP_CONFIG = {
       description : 'Elegant two and three piece dress sets perfect for festive wear, casual outings, and everything in between.',
       priceRange  : '₹999 – ₹5,999',
       icon        : '👗',
-      img         : '',  // e.g. 'assets/images/dresses/cover.jpg'
+      coverCount  : 1,
       products    : [],
     },
     {
@@ -149,7 +144,7 @@ const SHOP_CONFIG = {
       description : 'Premium designer fabrics sourced from the finest mills — ideal for creating your dream outfit with a personal touch.',
       priceRange  : '₹199 – ₹999 per metre',
       icon        : '🪡',
-      img         : '',  // e.g. 'assets/images/fabrics/cover.jpg'
+      coverCount  : 3,
       products    : [],
     },
     {
@@ -158,7 +153,7 @@ const SHOP_CONFIG = {
       description : 'Quality lining fabrics and stitching materials to complete your garment with perfection and durability.',
       priceRange  : '₹32 per metre',
       icon        : '🧵',
-      img         : '',  // e.g. 'assets/images/linings/cover.jpg'
+      coverCount  : 0,
       products    : [],
     },
     {
@@ -167,7 +162,7 @@ const SHOP_CONFIG = {
       description : 'Trendy, comfortable cord sets that balance style and ease — a must-have for the modern wardrobe.',
       priceRange  : '₹999 – ₹2,999',
       icon        : '✨',
-      img         : '',  // e.g. 'assets/images/cordsets/cover.jpg'
+      coverCount  : 2,
       products    : [],
     },
     {
@@ -176,15 +171,19 @@ const SHOP_CONFIG = {
       description : 'Complete your ethnic ensemble with our stunning dupatta collection — in organza, chiffon, silk and more.',
       priceRange  : '₹100 – ₹999',
       icon        : '🎀',
-      img         : '',  // e.g. 'assets/images/dupattas/cover.jpg'
+      coverCount  : 1,
+      products    : [],
+    },
+    {
+      id          : 'lace-latkans',
+      name        : 'Lace / Latkans',
+      description : 'Beautiful laces, latkans, and trimmings to add the perfect finishing touch to your outfits.',
+      priceRange  : '₹50 – ₹999',
+      icon        : '🪢',
+      coverCount  : 1,
       products    : [],
     },
   ],
-
-
-  // ┌───────────────────────────────────────────────────────────┐
-  // │  FEATURED PRODUCTS (shown on homepage)                    │
-  // │                                                           │
   // │  These 8 products appear in "Featured Collection".        │
   // │  • Update titles, prices, and badges as needed            │
   // │  • Set badge to '' (empty quotes) for no label            │
@@ -218,21 +217,21 @@ const SHOP_CONFIG = {
       name     : 'Customer Name 1',
       location : 'City',
       rating   : 5,
-      text     : 'Absolutely love my saree from Match N Design by Minal! The quality is outstanding and Minal personally helped me pick the perfect design for my wedding. Highly recommend!',
+      text     : 'Absolutely love my saree from Match & Design! The quality is outstanding and Minal personally helped me pick the perfect design for my wedding. Highly recommend!',
       initials : 'C1',
     },
     {
       name     : 'Customer Name 2',
       location : 'City',
       rating   : 5,
-      text     : "I've been shopping here for years and the collection keeps getting better. The designer fabrics here are unmatched in quality and variety. Such a wonderful boutique!",
+      text     : "I've been shopping here for years and the collection keeps getting better. The designer fabrics here are unmatched in quality and variety. Such a wonderful store!",
       initials : 'C2',
     },
     {
       name     : 'Customer Name 3',
       location : 'City',
       rating   : 5,
-      text     : 'Visited for a festive outfit and left with so much more! The personalized attention and premium collection make this my go-to boutique for all occasions.',
+      text     : 'Visited for a festive outfit and left with so much more! The personalized attention and premium collection make this my go-to store for all occasions.',
       initials : 'C3',
     },
   ],
@@ -269,7 +268,7 @@ const SHOP_CONFIG = {
     {
       icon  : '🤝',
       title : 'Personal Assistance',
-      desc  : 'Enjoy a boutique experience with dedicated personal attention to find exactly what you need.',
+      desc  : 'Enjoy a store experience with dedicated personal attention to find exactly what you need.',
     },
   ],
 
